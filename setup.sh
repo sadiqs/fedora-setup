@@ -41,7 +41,7 @@ sudo dnf install -y fish zsh autojump jq vim neofetch htop ripgrep dnfdragora gn
 #Zsh setup
 echo "Setting up zsh..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-omz theme use agnoster
+echo "omz theme use agnoster" >> ~/.zshrc
 sudo usermod -s $(which zsh) sadiq
 
 # Setup Scala environment
@@ -91,3 +91,20 @@ EOT
 echo "Enabling sshd..."
 sudo systemctl enable --now sshd
 
+echo "Installing nerd-fonts..."
+mkdir -p ~/.local/share/fonts
+cd ~/.fonts
+
+fc-cache -fv
+
+
+
+echo "Installing Brave browser..."
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+sudo dnf install -y brave-browser
+
+echo "Installing Visual Studio Code..."
+sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/vscode
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo dnf install -y code
