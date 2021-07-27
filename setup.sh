@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo dnf -y install dnf-plugins-core
 sudo dnf config-manager --setopt max_parallel_downloads=16 --setopt fastestmirror=1 --save
 
@@ -10,21 +11,20 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 #Docker
 echo "Clean legacy docker packages..."
 sudo dnf remove -y docker \
-                  docker-client \
-                  docker-client-latest \
-                  docker-common \
-                  docker-latest \
-                  docker-latest-logrotate \
-                  docker-logrotate \
-                  docker-selinux \
-                  docker-engine-selinux \
-                  docker-engine
-                  
+        docker-client \
+        docker-client-latest \
+        docker-common \
+        docker-latest \
+        docker-latest-logrotate \
+        docker-logrotate \
+        docker-selinux \
+        docker-engine-selinux \
+        docker-engine
 
 #sudo dnf config-manager \
 #    --add-repo \
 #    https://download.docker.com/linux/fedora/docker-ce.repo
-   
+
 # dnf list docker-ce  --showduplicates | sort -r
 
 #sudo dnf -y install docker-ce docker-ce-cli containerd.io
@@ -36,12 +36,27 @@ sudo dnf remove -y docker \
 #Utils
 echo "Installing utility packages..."
 
-sudo dnf install -y fish zsh autojump jq vim neofetch htop ripgrep dnfdragora gnome-tweaks xeyes s-tui
+sudo dnf install -y \
+        fish \
+        zsh \
+        autojump \
+        jq \
+        vim \
+        neofetch \
+        htop \
+        ripgrep \
+        dnfdragora \
+        gnome-tweaks \
+        xeyes \
+        s-tui
 
 #Zsh setup
 echo "Setting up zsh..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-echo "omz theme use agnoster" >> ~/.zshrc
+
+#TODO: find better way to set default theme after nerd fonts are installed
+#echo "omz theme use agnoster" >> ~/.zshrc
+echo "Set zsh as default shell..."
 sudo usermod -s $(which zsh) sadiq
 
 # Setup Scala environment
@@ -51,6 +66,13 @@ chmod +x cs
 ./cs setup --yes --jvm graalvm-ce-java8 --apps ammonite,bloop,cs,giter8,sbt,scala,scalafmt
 rm -f ./cs
 
+echo "Installing nodejs..."
+sudo dnf install -y nodejs yarnpkg
+
+echo "Installing Rust..."
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+echo "Install watchexec with cargo"
+cargo install watchexec-cli
 
 #Setup GitHub
 #sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
@@ -60,7 +82,6 @@ rm -f ./cs
 
 echo "Installing multimedia apps..."
 sudo dnf install -y ffmpeg vlc mpv gimp
-
 
 #Setup Samba
 echo "Setting up samba..."
@@ -75,7 +96,7 @@ mkdir /home/sadiq/share
 sudo semanage fcontext --add --type "samba_share_t" ~/share
 sudo restorecon -R ~/share
 
-sudo tee -a /etc/samba/smb.conf > /dev/null <<EOT
+sudo tee -a /etc/samba/smb.conf >/dev/null <<EOT
 [share]
         comment = My Share
         path = /home/sadiq/share
@@ -91,13 +112,12 @@ EOT
 echo "Enabling sshd..."
 sudo systemctl enable --now sshd
 
+#TODO: Install nerd-fonts
 echo "Installing nerd-fonts..."
-mkdir -p ~/.local/share/fonts
+mkdir -p ~/.fonts
 cd ~/.fonts
 
 fc-cache -fv
-
-
 
 echo "Installing Brave browser..."
 sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
