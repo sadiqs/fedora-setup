@@ -82,6 +82,11 @@ cargo install watchexec-cli
 
 echo "Installing multimedia apps..."
 sudo dnf install -y ffmpeg vlc mpv gimp
+ 
+cat <<EOT >> ~/.config/mpv/mpv.conf
+slang=eng,en,enUS,en-US,English
+sub-color="#FFA9A9A9"
+EOT
 
 #Setup Samba
 echo "Setting up samba..."
