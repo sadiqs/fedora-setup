@@ -23,6 +23,12 @@ about:config
 layers.acceleration.force-enabled
 gfx.webrender.all
 
+// Hardware video acceleration -- not verified yet
+media.ffmpeg.vaapi.enabled --> true
+media.ffvpx.enabled	--> false
+media.rdd-vpx.enabled	--> false
+media.navigator.mediadatadecoder_vpx_enabled	--> true
+
 Change DNS:
 8.8.8.8,8.8.4.4
 
