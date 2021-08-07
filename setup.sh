@@ -62,7 +62,6 @@ echo "Set zsh as default shell..."
 sudo usermod -s "$(which zsh)" sadiq
 
 echo "Hook direnv to shells..."
-bash -c ""
 
 cat <<EOT >> ~/.bashrc
 eval "$(direnv hook bash)"
