@@ -1,100 +1,50 @@
-3270.zip
-19.9 MB
-Agave.zip
-2.05 MB
-AnonymousPro.zip
-2.04 MB
-Arimo.zip
-10.9 MB
-AurulentSansMono.zip
-4.52 MB
-BigBlueTerminal.zip
-3.66 MB
-BitstreamVeraSansMono.zip
-7.86 MB
-CascadiaCode.zip
-1.97 MB
-CodeNewRoman.zip
-18.9 MB
-Cousine.zip
-9.93 MB
-DaddyTimeMono.zip
-1.8 MB
-DejaVuSansMono.zip
-10.1 MB
-DroidSansMono.zip
-4.82 MB
-FantasqueSansMono.zip
-8.71 MB
-FiraCode.zip
-72.9 MB
-FiraMono.zip
-28.3 MB
-Go-Mono.zip
-8.57 MB
-Gohu.zip
-7.71 MB
-Hack.zip
-13.8 MB
-Hasklig.zip
-67 MB
-HeavyData.zip
-1.97 MB
-Hermit.zip
-13.6 MB
-iA-Writer.zip
-50.8 MB
-IBMPlexMono.zip
-30.6 MB
-Inconsolata.zip
-17.6 MB
-InconsolataGo.zip
-3.82 MB
-InconsolataLGC.zip
-7.37 MB
-Iosevka.zip
-104 MB
-JetBrainsMono.zip
-23.4 MB
-Lekton.zip
-5.48 MB
-LiberationMono.zip
-31.5 MB
-Meslo.zip
-63.8 MB
-Monofur.zip
-6.53 MB
-Monoid.zip
-7.89 MB
-Mononoki.zip
-7.44 MB
-MPlus.zip
-246 MB
-Noto.zip
-889 MB
-OpenDyslexic.zip
-41.9 MB
-Overpass.zip
-93.3 MB
-ProFont.zip
-3.61 MB
-ProggyClean.zip
-5.48 MB
-RobotoMono.zip
-21.5 MB
-ShareTechMono.zip
-1.77 MB
-SourceCodePro.zip
-28.3 MB
-SpaceMono.zip
-7.55 MB
-Terminus.zip
-7.29 MB
-Tinos.zip
-11.1 MB
-Ubuntu.zip
-20.4 MB
-UbuntuMono.zip
-8.34 MB
-VictorMono.zip
-42.4 MB
+3270
+Agave
+AnonymousPro
+Arimo
+AurulentSansMono
+BigBlueTerminal
+BitstreamVeraSansMono
+CascadiaCode
+CodeNewRoman
+Cousine
+DaddyTimeMono
+DejaVuSansMono
+DroidSansMono
+FantasqueSansMono
+FiraCode
+FiraMono
+Go-Mono
+Gohu
+Hack
+Hasklig
+HeavyData
+Hermit
+iA-Writer
+IBMPlexMono
+Inconsolata
+InconsolataGo
+InconsolataLGC
+Iosevka
+JetBrainsMono
+Lekton
+LiberationMono
+Meslo
+Monofur
+Monoid
+Mononoki
+MPlus
+Noto
+OpenDyslexic
+Overpass
+ProFont
+ProggyClean
+RobotoMono
+ShareTechMono
+SourceCodePro
+SpaceMono
+Terminus
+Tinos
+Ubuntu
+UbuntuMono
+VictorMono

@@ -48,6 +48,7 @@ sudo dnf install -y \
         dnfdragora \
         gnome-tweaks \
         xeyes \
+        meld \
         s-tui
 
 #Zsh setup
@@ -57,7 +58,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 #TODO: find better way to set default theme after nerd fonts are installed
 #echo "omz theme use agnoster" >> ~/.zshrc
 echo "Set zsh as default shell..."
-sudo usermod -s $(which zsh) sadiq
+sudo usermod -s "$(which zsh)" sadiq
 
 # Setup Scala environment
 echo "Setting up Scala environment..."
@@ -82,7 +83,7 @@ cargo install watchexec-cli
 
 echo "Installing multimedia apps..."
 sudo dnf install -y ffmpeg vlc mpv gimp
- 
+
 cat <<EOT >> ~/.config/mpv/mpv.conf
 slang=eng,en,enUS,en-US,English
 sub-color="#FFA9A9A9"

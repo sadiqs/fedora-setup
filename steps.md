@@ -42,13 +42,13 @@ sudo dnf isntall dnfdragora
 Install GNOME Extensions:
 dnf install chrome-gnome-shell gnome-extensions-app
 
-Install KDEConnect:
+### Install KDEConnect:
 sudo dnf install kdeconnectd
 
-Install Steam:
+### Install Steam:
 sudo dnf install steam
 
-Better Fonts:
+### Better Fonts:
 sudo dnf copr enable dawid/better_fonts -y
 sudo dnf install fontconfig-font-replacements -y
 sudo dnf install fontconfig-enhanced-defaults -y
@@ -56,9 +56,51 @@ sudo dnf install fontconfig-enhanced-defaults -y
 Install Bleachbit:
 sudo dnf install bleachbit
 
+## Network config
+
 Add below lines to NetworkManager.conf
 
 ```
 [device]
 wifi.scan-rand-mac-address=no
+```
+## VS Code Setup
+
+### Install VIM extension
+
+Install VIM extension.
+
+Settings:
+| https://github.com/VSCodeVim/Vim
+
+```
+{
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-h>": false
+  }
+}
 ```
