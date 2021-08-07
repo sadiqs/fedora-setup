@@ -49,6 +49,7 @@ sudo dnf install -y \
         gnome-tweaks \
         xeyes \
         meld \
+        direnv \
         s-tui
 
 #Zsh setup
@@ -59,6 +60,21 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 #echo "omz theme use agnoster" >> ~/.zshrc
 echo "Set zsh as default shell..."
 sudo usermod -s "$(which zsh)" sadiq
+
+echo "Hook direnv to shells..."
+bash -c ""
+
+cat <<EOT >> ~/.bashrc
+eval "$(direnv hook bash)"
+EOT
+
+cat <<EOT >> ~/.zshrc
+eval "$(direnv hook zsh)"
+EOT
+
+cat <<EOT >> ~/.config/fish/config.fish
+>direnv hook fish | source
+EOT
 
 # Setup Scala environment
 echo "Setting up Scala environment..."

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=IntelliJ Idea
+Comment=IntelliJ Idea - Community Edition
+Exec=/home/sadiq/.local/idea-IC-212.4746.92/bin/idea.sh %F
+Icon=/home/sadiq/.local/idea-IC-212.4746.92/bin/idea.png
+Type=Application
+StartupNotify=false
+Categories=Development;IDE;
+Keywords=idea
