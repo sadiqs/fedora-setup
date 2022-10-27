@@ -1,0 +1,5 @@
+Alt <-      = Back
+Alt ->      = Forward
+
+Cmd F       = Find
+Alt Sft R   = Rename
