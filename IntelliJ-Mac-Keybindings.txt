@@ -1,5 +1,14 @@
-Alt <-      = Back
-Alt ->      = Forward
-
-Cmd F       = Find
-Alt Sft R   = Rename
+Main Menu >
+  Edit > Find
+    Find             = Cmd F
+    Replace          = Alt Cmd H
+    Replace in Files = Shift Cmd H, Ctl Shift H
+  Navigate
+    Back             = Alt <-
+    Forward          = Alt ->
+    
+    Goto by Reference > Hierarchy Actions
+      Method Hierarchy  = F4 (Keep)
+  Refactor
+    Rename           = Alt Shift R
+    
